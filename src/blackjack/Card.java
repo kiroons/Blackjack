@@ -1,4 +1,3 @@
-
 package blackjack;
 
 /**
@@ -6,10 +5,10 @@ package blackjack;
  * @author kclark
  */
 public class Card {
-    
+
     private Suit suit;
     private Rank rank;
-    
+
     /**
      * Constructor
      * @param s the suit of the card (e.g., Heart, Diamond)
@@ -18,6 +17,10 @@ public class Card {
     public Card(Suit s, Rank r) {
         suit = s;
         rank = r;
+    }
+
+    public int getCardImageIndex() {
+        return suit.ordinal() * Rank.values().length + rank.ordinal();
     }
 
     public Rank getRank() {
@@ -36,13 +39,11 @@ public class Card {
         this.suit = suit;
     }
 
-    
-    
     public enum Suit {
 
+        CLUB,
         HEART,
         SPADE,
-        CLUB,
         DIAMOND
     }
 
@@ -62,9 +63,9 @@ public class Card {
         QUEEN,
         KING
     }
-    
+
     @Override
     public String toString() {
-        return "[" + suit + ", " + rank +"]";
+        return "[" + suit + ", " + rank + "]";
     }
 }

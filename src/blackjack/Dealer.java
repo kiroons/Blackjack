@@ -31,14 +31,14 @@ public class Dealer {
         }
         
         // <testing>
-        //printDeck();
+        printDeck();
         // </testing>
         
         // shuffle cards
         shuffle(deck);
         
         // <testing>
-        //printDeck();
+        printDeck();
         // </testing>
     }
 

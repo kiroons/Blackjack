@@ -5,5 +5,6 @@
 *.war
 *.ear
 
-# java files
+# netbeans files
 build
+dist
